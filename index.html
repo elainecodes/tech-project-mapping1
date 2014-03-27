@@ -48,8 +48,8 @@ var lead_data=[
 ['Plus','GA',348,3],
 ['Grand','GA',4244,18],
 ['Elite','GA',1536,1],
-['Small','Small',351,0],
-['Grand','Small',405,1],
+['Small','IA',351,0],
+['Grand','IA',405,1],
 ['Small','IL',914,1],
 ['Medium','IL',127,0],
 ['Grand','IL',1470,7],
@@ -389,8 +389,8 @@ var svg = d3.select("body").append("svg").attr('width',width).attr('height',(hei
 	.append("g").attr("transform","translate("+ margin.l+","+margin.t+")");
 
 var data = [ 
-	{data:bP.partData(lead_data,2), id:'leads', header:["Channel","State", "Leads"]},
-	{data:bP.partData(lead_data,3), id:'binds', header:["Channel","State", "Binds"]}
+	{data:bP.partData(lead_data,2), id:'leads', header:["Channel","State", "Sales Attempts"]},
+	{data:bP.partData(lead_data,3), id:'binds', header:["Channel","State", "Sales"]}
 ];
 
 bP.draw(data, svg);
