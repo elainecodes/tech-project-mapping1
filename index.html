@@ -16,7 +16,7 @@ rect{
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="biPartite.js"></script>
 <script>
-var lead_data=[
+var sales_data=[
 ['Lite','AL',16,0],
 ['Small','AL',1278,4],
 ['Medium','AL',27,0],
@@ -132,8 +132,8 @@ var svg = d3.select("body")
 	.append("g").attr("transform","translate("+ margin.l+","+margin.t+")");
 
 var data = [ 
-	{data:bP.partData(lead_data,2), id:'leads', header:["Channel","State", "Leads"]},
-	{data:bP.partData(lead_data,3), id:'binds', header:["Channel","State", "Binds"]}
+	{data:bP.partData(sales_data,2), id:'SalesAttempts', header:["Channel","State", "Sales Attempts"]},
+	{data:bP.partData(sales_data,3), id:'Sales', header:["Channel","State", "Sales"]}
 ];
 
 bP.draw(data, svg);
