@@ -61,8 +61,7 @@ var svg = d3.select("#bipartite_svg")//.attr("viewbox","0 0 " + width + " " + he
     .append("g").attr("transform","translate("+ margin.l+","+margin.t+")");
 
 var data = [ 
-	{data:bP.partData(sales_data,2), id:'SalesAttempts', header:["Channel","State", "Sales Attempts"]},
-	{data:bP.partData(sales_data,3), id:'Sales', header:["Channel","State", "Sales"]}
+	{data:bP.partData(sales_data,2), id:'SalesAttempts', header:["Channel","State", "Technology to LCNF Project Mapping"]},
 ];
 
 bP.draw(data, svg);
