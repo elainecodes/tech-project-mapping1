@@ -8,10 +8,7 @@ body{
 svg text{
 	font-size:12px;
 }
-text.barvalue{
-  visibility:hidden;
-  }
-text.barpercent{
+text.barvalue, text.barpercent{
   visibility:hidden;
   }
 //g.header{
@@ -81,7 +78,18 @@ var svg = d3.select("body")
 ];
 
 bP.draw(data, svg);
-var childheader = document.getElementsByClassName("header").childnodes;
-  
+
+var header = document.getElementsByClassName("header");
+for (j=0;j<2;j++){
+    var childheader = header[j].childNodes;
+    for (i = 0; i < childheader.length; i++) {
+        if (childheader[i].innerHTML=="Count") {
+            childheader[i].style.visibility = 'hidden';
+        }
+        if (childheader[i].nodeName == "line") {
+            childheader[i].style.visibility = 'hidden';
+        }
+    }
+}
 </script>
 </body>
