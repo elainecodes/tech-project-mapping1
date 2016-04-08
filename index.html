@@ -40,7 +40,6 @@ var sales_data=[
 ['DSM','FALCON',10],
 ['EES','CLNR',10],
 ['EES','FALCON',5],
-['EES','NINES',30],
 ['EES','SNS',30],
 ['EES','BRISTOL',15],
 ['EES','NTVV',20],
@@ -74,7 +73,7 @@ var svg = d3.select("body")
 
    
   var data = [ 
-	{data:bP.partData(sales_data,2), id:'SalesAttempts', header:["Tech","LCNF", "Technology Mapping"]},
+	{data:bP.partData(sales_data,2), id:'SalesAttempts', header:["Technology Area","LCNF Project", "Technology Mapping"]},
 ];
 
 bP.draw(data, svg);
